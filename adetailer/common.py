@@ -4,7 +4,7 @@ from collections import OrderedDict
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional, Union
-
+from modules.shared import models_path
 from huggingface_hub import hf_hub_download
 from PIL import Image, ImageDraw
 from rich import print
