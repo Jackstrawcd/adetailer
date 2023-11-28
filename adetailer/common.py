@@ -25,7 +25,10 @@ def hf_download(file: str):
 
     if _download_failed:
         return "INVALID"
-
+    local = os.path.join(models_path, "adetailer", file)
+    if os.path.isfile(local):
+        return local
+    print(f"cannot found local ad model:{local}")
     try:
         path = hf_hub_download(repo_id, file)
     except Exception:
